@@ -25,6 +25,7 @@ html {
   height: 75vh;
   /* divider line  */
   border-bottom: solid 0.2rem grey;
+  filter: grayscale(1);
 }
 
 .mainIntroImgs {
