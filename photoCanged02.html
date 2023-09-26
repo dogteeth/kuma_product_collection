@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="fadein">
+      <img
+        id="1"
+        src="http://farm3.static.flickr.com/2610/4148988872_990b6da667.jpg"
+        alt=""
+      />
+      <img
+        id="2"
+        src="http://farm3.static.flickr.com/2597/4121218611_040cd7b3f2.jpg"
+        alt=""
+      />
+      <img
+        id="3"
+        src="http://farm3.static.flickr.com/2531/4121218751_ac8bf49d5d.jpg"
+        alt=""
+      />
+    </div>
+    <script>
+      $(".fadein img:gt(0)").hide();
+      $(".fadein").hover(
+        function () {
+          timer = setInterval(function () {
+            $(".fadein :first-child")
+              .fadeOut()
+              .next("img")
+              .fadeIn()
+              .end()
+              .appendTo(".fadein");
+          }, 1000);
+        },
+        function () {
+          clearInterval(timer);
+        }
+      );
+    </script>
+  </body>
+</html>
