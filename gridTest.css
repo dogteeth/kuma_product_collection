@@ -1,0 +1,137 @@
+html {
+  scroll-behavior: smooth;
+}
+.products_collection {
+  margin-bottom: 1%;
+}
+
+:root {
+  --primary: Aquamarine;
+  --background-color: Teal;
+}
+
+.products_collection > * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 主視覺 */
+.mainIntro {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 80%;
+  margin: auto;
+  height: 75vh;
+  /* divider line  */
+  border-bottom: solid 0.2rem grey;
+}
+
+.mainIntroImgs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.mainImg {
+  overflow: hidden;
+  position: relative;
+  /* border: solid 0.3rem black; */
+  /* border-radius: 1rem; */
+  width: 25%;
+  background-color: grey;
+}
+
+.mainImg:hover {
+  box-shadow: 1px 10px 5px rgb(0, 0, 0, 0.7);
+}
+
+.mainImg > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.mainImgText {
+  display: none;
+  width: 0;
+  position: absolute;
+  color: white;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  background-color: rgba(128, 128, 128, 0.9);
+  border-radius: 1rem;
+  overflow: hidden;
+  opacity: 0;
+  box-shadow: 1px 10px 5px rgb(0, 0, 0, 0.8);
+}
+
+.mainImgText h2 {
+  font-size: 1em;
+  padding-top: 1rem;
+  white-space: nowrap;
+  text-align: center;
+}
+.mainImgText p {
+  text-align: justify;
+  padding: 1rem;
+  font-size: 0.8em;
+}
+
+/* 商品列表 */
+.product_content {
+  width: 80%;
+  padding: 1%;
+  margin-bottom: 2%;
+  margin: 1rem auto 0 auto;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  background-color: rgba(128, 128, 128, 0.8);
+}
+
+.product_container {
+}
+
+.imgs_list {
+  width: 100%;
+  border: solid 5px red;
+}
+.productImgs img {
+  width: 100%;
+  max-width: 300px;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.product_details {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  color: white;
+  padding-left: 1%;
+}
+
+.product_content h3 {
+  color: white;
+}
+
+.product_listPrice {
+  display: flex;
+  align-items: center;
+}
+
+.fontAwesomePin,
+p {
+  color: white;
+  font-size: 1.2rem;
+}

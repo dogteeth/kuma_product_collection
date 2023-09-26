@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="imgs_list">
+      <img
+        src="http://images.freeimages.com/images/previews/dbb/shirt-1-1457400.jpg"
+        alt=""
+        class="preview"
+      />
+      <img
+        src="http://images.freeimages.com/images/previews/025/shirt-2-1457399.jpg"
+        alt=""
+        class="preview"
+      />
+      <img
+        src="http://images.freeimages.com/images/previews/2d6/shirt-3-1457403.jpg"
+        alt=""
+        class="preview"
+      />
+    </div>
+    <div class="imgs_list">
+      <img
+        src="http://images.freeimages.com/images/previews/624/in-the-garden-1-1378570.jpg"
+        alt=""
+        class="preview"
+      />
+      <img
+        src="http://images.freeimages.com/images/previews/7da/in-the-garden-2-1378564.jpg"
+        alt=""
+        class="preview"
+      />
+      <img
+        src="http://images.freeimages.com/images/previews/9b6/in-the-garden-3-1378559.jpg"
+        alt=""
+        class="preview"
+      />
+      <img
+        src="http://images.freeimages.com/images/previews/373/in-the-garden-4-1378553.jpg"
+        alt=""
+        class="preview"
+      />
+    </div>
+    <script>
+      $(document).ready(function () {
+        var myInterval = false;
+        $(".preview").hide();
+        $("div.imgs_list").each(function () {
+          $(".preview:first", this).show();
+          $(this).height($(".preview:first", this).height());
+        });
+        $(".preview").hover(
+          function (e) {
+            var $imgGrp = $(e.target);
+            var $parent = $imgGrp.parent();
+            var $firstImage = $parent.children(".preview:first");
+            var iOffSet = $firstImage.offset();
+            myInterval = setInterval(function () {
+              var $nextImg;
+              $firstImage.hide();
+              if ($imgGrp.next(".preview").length == 0) {
+                $imgGrp.fadeOut("normal");
+                $imgGrp = $firstImage;
+                $nextImg = $imgGrp;
+              } else $nextImg = $imgGrp.next(".preview");
+              if ($imgGrp != $nextImg) $imgGrp.fadeOut("normal");
+              $nextImg.css({
+                top: iOffSet.top,
+                left: iOffSet.left,
+                position: "absolute",
+              });
+              $nextImg.fadeIn("normal");
+              $imgGrp = $nextImg;
+            }, 750);
+          },
+
+          function () {
+            var $imgGrp = $(this);
+            var $parent = $imgGrp.parent();
+            var $firstImage = $parent.children(".preview:first");
+            if ($(this).attr("src") != $firstImage.attr("src")) {
+              $(this).fadeOut("fast");
+            }
+            $firstImage.fadeIn("fast");
+            clearInterval(myInterval);
+            myInterval = false;
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
