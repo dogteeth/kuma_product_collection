@@ -1076,7 +1076,7 @@
 
         <!-- 圖片更換用jQuery CDN-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <link rel="stylesheet" href="sampleGrid.css" />
+        <link rel="stylesheet" href="sampleGrid_ImgHover.css" />
         <!-- html code for 集結頁 -->
         <div class="products_collection">
           <!-- 主視覺區 -->
@@ -1174,6 +1174,13 @@
                     <!-- img01 -->
                     <img
                       src="https://static-assets.oen.tw/images/img-2PztxdRTLzdOICc0scEFEcv2r0F.jpg"
+                      width="300"
+                      height="300"
+                      alt="productImg"
+                      class="preview"
+                    />
+                    <img
+                      src="https://static-assets.oen.tw/images/img-2Pzk4gu1UsMxb29OkQMm4sm6GGU.jpg"
                       width="300"
                       height="300"
                       alt="productImg"
@@ -1554,55 +1561,9 @@
         </script>
 
         <!-- 商品圖輪播 jQuery -->
-        <!-- 
-        <script>
-          $(document).ready(function () {
-            var myInterval = false;
-            $(".preview").hide();
-            $("div.imgs_list").each(function () {
-              $(".preview:first", this).show();
-              $(this).height($(".preview:first", this).height());
-            });
-            $(".preview").hover(
-              function (e) {
-                var $imgGrp = $(e.target);
-                var $parent = $imgGrp.parent();
-                var $firstImage = $parent.children(".preview:first");
-                var iOffSet = $firstImage.offset();
-                myInterval = setInterval(function () {
-                  var $nextImg;
-                  $firstImage.hide();
-                  if ($imgGrp.next(".preview").length == 0) {
-                    $imgGrp.fadeOut("normal");
-                    $imgGrp = $firstImage;
-                    $nextImg = $imgGrp;
-                  } else $nextImg = $imgGrp.next(".preview");
-                  if ($imgGrp != $nextImg) $imgGrp.fadeOut("normal");
-                  $nextImg.css({
-                    top: iOffSet.top,
-                    left: iOffSet.left,
-                    position: "absolute",
-                  });
-                  $nextImg.fadeIn("normal");
-                  $imgGrp = $nextImg;
-                }, 750);
-              },
 
-              function () {
-                var $imgGrp = $(this);
-                var $parent = $imgGrp.parent();
-                var $firstImage = $parent.children(".preview:first");
-                if ($(this).attr("src") != $firstImage.attr("src")) {
-                  $(this).fadeOut("fast");
-                }
-                $firstImage.fadeIn("fast");
-                clearInterval(myInterval);
-                myInterval = false;
-              }
-            );
-          });
-        </script>
-         -->
+        <script src="imgHoverEffect.js"></script>
+
         <!-- 集結頁結束 -->
 
         <script

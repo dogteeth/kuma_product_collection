@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .team {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      width: 50%;
+    }
+    .grid-xlarge {
+      width: 100%;
+    }
+    .team__img img {
+      width: 500px;
+      height: 500px;
+    }
+  </style>
+  <body>
+    <!-- Team -->
+    <section class="team">
+      <div class="grid-xlarge">
+        <div class="team__container">
+          <article>
+            <a
+              class="team__link"
+              href="https://www.linkedin.com/in/thomasvaeth/"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="team__img-container">
+                <span class="preloader"></span>
+                <figure class="team__img">
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/OKrac02GXgQ/1600x1600"
+                    alt=""
+                  />
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/Z8XMAHDpjyU/1600x1600"
+                    alt=""
+                  />
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/_FoHMYYlatI/1600x1600"
+                    alt=""
+                  />
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/Shuj-9LqHwk/1600x1600"
+                    alt=""
+                  />
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/sseiVD2XsOk/1600x1600"
+                    alt=""
+                  />
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/2Ts5HnA67k8/1600x1600"
+                    alt=""
+                  />
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/Ku-pKAfBPFU/1600x1600"
+                    alt=""
+                  />
+                </figure>
+              </div>
+              <div class="team__text">
+                <h3 class="team__title">Thomas Vaeth</h3>
+                <span class="team__position">Web Developer</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <script>
+      const ImageLoop = (() => {
+        let s;
+
+        return {
+          settings() {
+            return {
+              image: document.querySelectorAll(".team__img"),
+              link: document.querySelectorAll(".team__link"),
+              intervalTime: 250,
+            };
+          },
+
+          init() {
+            s = this.settings();
+            this.bindEvents();
+          },
+
+          bindEvents() {
+            this.hideImg();
+            this.hoverImg();
+          },
+
+          hideImg() {
+            [].forEach.call(s.image, (img) => {
+              [].forEach.call(img.children, (moreImg, idx) => {
+                if (idx !== 0) {
+                  moreImg.style.display = "none";
+                }
+              });
+            });
+          },
+
+          hoverImg() {
+            [].forEach.call(s.link, (link) => {
+              let interval;
+              let count = 0;
+
+              link.addEventListener("mouseenter", (e) => {
+                const target = e.target.children[0];
+                // Idx 1 because of the span tag/preloader
+                const img = target.children[1].children;
+                const length = img.length;
+
+                interval = setInterval(() => {
+                  img[count].style.display = "none";
+
+                  if (count === length - 1) {
+                    count = 0;
+                  } else {
+                    count++;
+                  }
+
+                  img[count].style.display = "block";
+                }, s.intervalTime);
+              });
+
+              link.addEventListener("mouseleave", () => {
+                clearInterval(interval);
+              });
+            });
+          },
+        };
+      })();
+
+      ImageLoop.init();
+    </script>
+  </body>
+</html>
