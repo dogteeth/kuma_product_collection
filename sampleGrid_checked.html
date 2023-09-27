@@ -81,7 +81,7 @@
     <link rel="canonical" href="https://kuma-academy.org/?page_id=1288" />
     <meta property="og:locale" content="zh_TW" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="fqa - 黑熊學院" />
+    <meta property="og:title" content="商品 - 黑熊學院" />
     <meta property="og:url" content="https://kuma-academy.org/?page_id=1288" />
     <meta property="og:site_name" content="黑熊學院" />
     <meta
@@ -1065,18 +1065,15 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
         />
 
-        <!-- 集結頁開始 -->
+        <!-- ***** 集結頁開始 ***** -->
 
-        <!-- style sheet for 集結頁 -->
-        <!-- <link rel="stylesheet" href="./zCollection_01.css" /> -->
+        <!-- style sheet for 商品集結頁，共兩個-->
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         />
-
-        <!-- 圖片更換用jQuery CDN-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <link rel="stylesheet" href="sampleGrid.css" />
+
         <!-- html code for 集結頁 -->
         <div class="products_collection">
           <!-- 主視覺區 -->
@@ -1084,15 +1081,7 @@
             <div class="mainIntroImgs">
               <!-- 圖01 -->
               <div class="mainImg expander">
-                <div class="mainImgText">
-                  <h2>戰爭樣貌</h2>
-                  <p>
-                    暸解現代戰事的形貎，了解戰爭實際上如何進行。降低未知及不測的恐懼，從而管控戰爭風險。<em
-                      class="mainIntro_link"
-                      ><a href="#01">查詢課程</a></em
-                    >
-                  </p>
-                </div>
+                <div class="mainImgText"></div>
                 <img
                   src="kuma_05.png"
                   alt="kuma_Img"
@@ -1103,15 +1092,7 @@
 
               <!-- 圖02  -->
               <div class="mainImg expander">
-                <div class="mainImgText">
-                  <h2>資訊作戰</h2>
-                  <p>
-                    平時建立資訊安全環境，從線上到線下瞭解資訊作戰模式，戰時透過公開情報蒐集，快速闢謠並提供我方有效情資。<em
-                      class="mainIntro_link"
-                      ><a href="#02">查詢課程</a></em
-                    >
-                  </p>
-                </div>
+                <div class="mainImgText"></div>
                 <img
                   src="kuma_06.png"
                   alt="kuma_Img"
@@ -1119,18 +1100,19 @@
                   height="800"
                 />
               </div>
-
+              <!-- 圖00 plus -->
+              <div class="mainImg expander">
+                <div class="mainImgText"></div>
+                <img
+                  src="kuma_01.png"
+                  alt="kuma_Img"
+                  width="800"
+                  height="800"
+                />
+              </div>
               <!-- 圖03 -->
               <div class="mainImg expander">
-                <div class="mainImgText">
-                  <h2>衛生與基礎救護</h2>
-                  <p>
-                    由個人自救出發，向互助救人發展。從災難時生理與心理健康為基䂾，擴展至創傷處置與脫離災難現場，並發展現場應變與交接能力。<em
-                      class="mainIntro_link"
-                      ><a href="#03">查詢課程</a></em
-                    >
-                  </p>
-                </div>
+                <div class="mainImgText"></div>
                 <img
                   src="kuma_07.png"
                   alt="kuma_Img"
@@ -1141,15 +1123,7 @@
 
               <!-- 圖04  -->
               <div class="mainImg expander">
-                <div class="mainImgText">
-                  <h2>防災避難規劃</h2>
-                  <p>
-                    自身防衛開始，擴展到居家環境的固守，及移動避難時的規劃，準備與應變。<em
-                      class="mainIntro_link"
-                      ><a href="#04">查詢課程</a></em
-                    >
-                  </p>
-                </div>
+                <div class="mainImgText"></div>
                 <img
                   src="kuma_08.png"
                   alt="kuma_Img"
@@ -1455,7 +1429,7 @@
             <div class="product_container">
               <div class="productImgs">
                 <a
-                  href="https://kuma-academy.oen.tw/good/2TKRLAvjDg9LyNyhGunPB3wO146?from=kuma-academy&m=cash"
+                  href="https://kuma-academy.oen.tw/good/2U0eXgc88vJ2HB8a44FQzddEqVg?from=kuma-academy&m=cash"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -1523,11 +1497,7 @@
             //create animation for each expander
             let animation = gsap.timeline({ paused: true });
 
-            let mainText = expander.querySelector(".mainImgText");
-
-            animation
-              .to(expander, { width: 1500, duration: 0.1 })
-              .to(mainText, { width: "95%", opacity: "1", duration: 0.2 });
+            animation.to(expander, { width: 500, duration: 0.1 });
 
             // animation.from(
             //   close,

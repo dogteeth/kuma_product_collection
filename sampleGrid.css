@@ -1,13 +1,5 @@
-html {
-  scroll-behavior: smooth;
-}
 .products_collection {
   margin-bottom: 1%;
-}
-
-:root {
-  --primary: Aquamarine;
-  --background-color: Teal;
 }
 
 .products_collection > * {
@@ -16,16 +8,111 @@ html {
   box-sizing: border-box;
 }
 
-/* 主視覺 */
-.mainIntro {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  width: 80%;
-  margin: auto;
-  height: 75vh;
-  /* divider line  */
-  border-bottom: solid 0.2rem grey;
+/* rwd 設定開始 */
+
+/* 手機 */
+@media (max-width: 700px) {
+  .mainIntro {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 95%;
+    margin: auto;
+    height: 50vh;
+    border-bottom: solid 0.2rem grey;
+  }
+  .product_content {
+    width: 95%;
+    /* padding: 1%; */
+    margin-bottom: 2%;
+    margin: 1rem auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  .product_content h3 {
+    text-align: justify;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: white;
+  }
+
+  .fontAwesomePin,
+  p {
+    color: white;
+    font-size: 1rem;
+  }
 }
+
+/* 平板 */
+@media (min-width: 701px) and (max-width: 1100px) {
+  .mainIntro {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 95%;
+    margin: auto;
+    height: 50vh;
+    border-bottom: solid 0.2rem grey;
+  }
+  .product_content {
+    width: 95%;
+    margin-bottom: 2%;
+    margin: 1rem auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .product_content h3 {
+    text-align: justify;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: white;
+  }
+
+  .fontAwesomePin,
+  p {
+    color: white;
+    font-size: 1rem;
+  }
+}
+
+/* 桌機 */
+@media (min-width: 1101px) {
+  .mainIntro {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 80%;
+    margin: auto;
+    height: 50vh;
+    border-bottom: solid 0.2rem grey;
+  }
+
+  .product_content {
+    width: 80%;
+    margin-bottom: 2%;
+    margin: 1rem auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  .product_content h3 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: white;
+  }
+
+  .fontAwesomePin,
+  p {
+    color: white;
+    font-size: 1rem;
+  }
+}
+
+/* rwd 設定結束 */
+
+/* 主視覺 */
 
 .mainIntroImgs {
   display: flex;
@@ -39,14 +126,8 @@ html {
 .mainImg {
   overflow: hidden;
   position: relative;
-  /* border: solid 0.3rem black; */
-  /* border-radius: 1rem; */
-  width: 25%;
+  width: 20%;
   background-color: grey;
-}
-
-.mainImg:hover {
-  /* box-shadow: 1px 10px 5px rgb(0, 0, 0, 0.7); */
 }
 
 .mainImg > img {
@@ -58,42 +139,9 @@ html {
 
 .mainImgText {
   display: none;
-  width: 0;
-  position: absolute;
-  color: white;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  background-color: rgba(128, 128, 128, 0.9);
-  border-radius: 1rem;
-  overflow: hidden;
-  opacity: 0;
-  box-shadow: 1px 10px 5px rgb(0, 0, 0, 0.8);
-}
-
-.mainImgText h2 {
-  font-size: 1em;
-  padding-top: 1rem;
-  white-space: nowrap;
-  text-align: center;
-}
-.mainImgText p {
-  text-align: justify;
-  padding: 1rem;
-  font-size: 0.8em;
 }
 
 /* 商品列表 */
-.product_content {
-  width: 80%;
-  padding: 1%;
-  margin-bottom: 2%;
-  margin: 1rem auto 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
 
 .product_container {
   display: flex;
@@ -126,20 +174,7 @@ html {
   gap: 0.2rem;
 }
 
-.product_content h3 {
-  font-weight: 500;
-  font-size: 1.3rem;
-  line-height: 1.5rem;
-  color: white;
-}
-
 .product_listPrice {
   display: flex;
   align-items: center;
-}
-
-.fontAwesomePin,
-p {
-  color: white;
-  font-size: 1.2rem;
 }
