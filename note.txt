@@ -1,0 +1,4 @@
+1. products.html：所需要的html碼，以"商品集結頁開始"、"商品集結頁結束"標記。
+2. css：一個是font awesome的CDN連結，做符號圖像的使用，另一個為products.css. 
+3. js：使用 GSAP。GSAP CDN連結與JS程式碼。
+4. 圖像圖檔五個。
