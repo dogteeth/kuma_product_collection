@@ -1,0 +1,178 @@
+.products_collection {
+  margin-bottom: 1%;
+}
+
+.products_collection > * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* rwd 設定開始 */
+
+/* 手機 */
+@media (max-width: 700px) {
+  .mainIntro {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 95%;
+    margin: auto;
+    height: 50vh;
+    border-bottom: solid 0.2rem grey;
+  }
+  .product_content {
+    width: 95%;
+    /* padding: 1%; */
+    margin-bottom: 2%;
+    margin: 1rem auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  .product_content h3 {
+    text-align: justify;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: white;
+  }
+
+  .fontAwesomePin,
+  p {
+    color: white;
+    font-size: 1rem;
+  }
+}
+
+/* 平板 */
+@media (min-width: 701px) and (max-width: 1100px) {
+  .mainIntro {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 95%;
+    margin: auto;
+    height: 50vh;
+    border-bottom: solid 0.2rem grey;
+  }
+  .product_content {
+    width: 95%;
+    margin-bottom: 2%;
+    margin: 1rem auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .product_content h3 {
+    text-align: justify;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: white;
+  }
+
+  .fontAwesomePin,
+  p {
+    color: white;
+    font-size: 1rem;
+  }
+}
+
+/* 桌機 */
+@media (min-width: 1101px) {
+  .mainIntro {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 80%;
+    margin: auto;
+    height: 50vh;
+    border-bottom: solid 0.2rem grey;
+  }
+
+  .product_content {
+    width: 80%;
+    margin-bottom: 2%;
+    margin: 1rem auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  .product_content h3 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: white;
+  }
+
+  .fontAwesomePin,
+  p {
+    color: white;
+    font-size: 1rem;
+  }
+}
+
+/* ***rwd 設定結束*** */
+
+/* 主視覺 */
+.mainIntroImgs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.mainImg {
+  overflow: hidden;
+  position: relative;
+  width: 20%;
+  background-color: grey;
+}
+
+.mainImg > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.mainImgText {
+  display: none;
+}
+
+/* 商品列表 */
+.product_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  background-color: grey;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.imgs_list {
+  width: 100%;
+}
+.productImgs img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.productImgs img:hover {
+  box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.7);
+}
+
+.product_details {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  color: white;
+  padding-left: 1%;
+  gap: 0.2rem;
+}
+
+.product_listPrice {
+  display: flex;
+  align-items: center;
+}
