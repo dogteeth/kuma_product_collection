@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .hoverDiv {
+        width: 300px;
+        border: solid 5px red;
+      }
+      .hoverDiv img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hoverDiv" id="imageLoop"><img src="kuma_01.png" alt="" /></div>
+    <script>
+      const linkAddress = [
+        "kuma_01.png",
+        "kuma_02.png",
+        "kuma_03.png",
+        "kuma_04.png",
+      ];
+
+      let start = 0;
+      const imageChange = document.querySelector("#imageLoop");
+      imageChange.addEventListener("mouseover", set_time);
+      imageChange.addEventListener("mouseout", end);
+      let intvl;
+      function set_time() {
+        intvl = setInterval(change, 1000);
+      }
+      function change() {
+        if (start < linkAddress.length) {
+          console.log(start);
+          imageChange.firstChild.src = linkAddress[start];
+          start++;
+        } else {
+          start = 0;
+        }
+      }
+
+      function end() {
+        start = 0;
+        clearInterval(intvl);
+        imageChange.firstChild.src = linkAddress[0];
+      }
+    </script>
+  </body>
+</html>

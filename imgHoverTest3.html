@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: grid;
+        width: 100%;
+      }
+      .hoverDiv {
+        width: 300px;
+      }
+      .hoverDiv img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hello</h1>
+
+    <div class="hoverDiv" id="imageLoop">
+      <img src="kuma_01.png" alt="" class="changedImg" />
+    </div>
+    <script>
+      const linkAddress = [
+        "kuma_01.png",
+        "kuma_02.png",
+        "kuma_03.png",
+        "kuma_04.png",
+      ];
+
+      gsap.set(".changedImg", {
+        x: 1000,
+        attr: { src: linkAddress[1] },
+        duration: 3,
+      });
+
+      gsap.from("h1", { x: 500, duration: 3 });
+    </script>
+    <!--  
+   <script>
+    gsap.set(img, { attr: { src: newSRC } });
+
+      const linkAddress = [
+        "kuma_01.png",
+        "kuma_02.png",
+        "kuma_03.png",
+        "kuma_04.png",
+      ];
+
+      let start = 0;
+      const imageChange = document.querySelector("#imageLoop");
+      imageChange.addEventListener("mouseover", set_time);
+      imageChange.addEventListener("mouseout", end);
+      let intvl;
+      function set_time() {
+        intvl = setInterval(change, 1000);
+      }
+      function change() {
+        if (start < linkAddress.length) {
+          console.log(start);
+          imageChange.firstChild.src = linkAddress[start];
+          start++;
+        } else {
+          start = 0;
+        }
+      }
+
+      function end() {
+        start = 0;
+        clearInterval(intvl);
+        imageChange.firstChild.src = linkAddress[0];
+      }
+    </script>
+    -->
+  </body>
+</html>

@@ -1,0 +1,13 @@
+        
+      var tl = new TimelineMax({ paused: true });
+      tl.to(".imageLoop", 2, { rotation: 360, ease: Power2.easeInOut });
+
+      document
+        .querySelector("#box1")
+        .addEventListener("mouseenter", doCoolStuff);
+
+      function doCoolStuff() {
+        if (!tl.isActive()) {
+          tl.play(0);
+        }
+      }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .hoverDiv {
+        width: 300px;
+      }
+      .hoverDiv img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hoverDiv" id="001"><img src="kuma_01.png" alt="" /></div>
+    <script>
+      const linkAddress = [
+        "kuma_01.png",
+        "kuma_02.png",
+        "kuma_03.png",
+        "kuma_04.png",
+      ];
+      console.log("good");
+      const target = document.getElementById("001");
+      target.addEventListener("mouseover", function () {
+        target.firstChild.src = "kuma_02.png";
+      });
+    </script>
+  </body>
+</html>
