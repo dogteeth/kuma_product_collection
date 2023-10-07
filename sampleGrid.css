@@ -158,10 +158,11 @@
   width: 100%;
   height: auto;
   object-fit: contain;
+  box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.7);
 }
 
 .productImgs img:hover {
-  box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.7);
 }
 
 .product_details {
