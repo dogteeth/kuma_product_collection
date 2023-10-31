@@ -1,5 +1,3 @@
-console.log("good");
-
 // 取得所有商品的照片組
 const targets = document.querySelectorAll(".imgs_list");
 

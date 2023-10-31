@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- style: header的style 皆為原版型的style設定 -->
+    <!-- style_css -->
+    <link
+      rel="stylesheet"
+      href="https://kuma-academy.org/wp-content/themes/kuma/styles/components.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kuma-academy.org/wp-content/themes/kuma/styles/header.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kuma-academy.org/wp-content/themes/kuma/styles/footer.css"
+    />
+    <!-- /style_css -->
+    <style type="text/css">
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+
+    <style type="text/css" id="ppress-store-menu-styling">
+      #wp-admin-bar-ppress-store-menu .ppress-mode {
+        color: #fff;
+        background-color: #0073aa;
+        padding: 3px 7px;
+        font-weight: 600;
+        border-radius: 3px;
+        font-size: 12px;
+      }
+
+      #wp-admin-bar-ppress-store-menu .ppress-mode-live {
+        background-color: #32cd32;
+      }
+
+      #wp-admin-bar-ppress-store-menu .ppress-mode-test {
+        background-color: #ffde92;
+        color: #a04903;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      id="wp-block-library-css"
+      href="https://kuma-academy.org/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      id="classic-theme-styles-css"
+      href="https://kuma-academy.org/wp-includes/css/classic-themes.min.css?ver=1"
+      media="all"
+    />
+
+    <style id="global-styles-inline-css" type="text/css">
+      body {
+        --wp--preset--color--black: #000000;
+        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+        --wp--preset--color--white: #ffffff;
+        --wp--preset--color--pale-pink: #f78da7;
+        --wp--preset--color--vivid-red: #cf2e2e;
+        --wp--preset--color--luminous-vivid-orange: #ff6900;
+        --wp--preset--color--luminous-vivid-amber: #fcb900;
+        --wp--preset--color--light-green-cyan: #7bdcb5;
+        --wp--preset--color--vivid-green-cyan: #00d084;
+        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+        --wp--preset--color--vivid-cyan-blue: #0693e3;
+        --wp--preset--color--vivid-purple: #9b51e0;
+        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(
+          135deg,
+          rgba(6, 147, 227, 1) 0%,
+          rgb(155, 81, 224) 100%
+        );
+        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(
+          135deg,
+          rgb(122, 220, 180) 0%,
+          rgb(0, 208, 130) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(
+          135deg,
+          rgba(252, 185, 0, 1) 0%,
+          rgba(255, 105, 0, 1) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(
+          135deg,
+          rgba(255, 105, 0, 1) 0%,
+          rgb(207, 46, 46) 100%
+        );
+        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(
+          135deg,
+          rgb(238, 238, 238) 0%,
+          rgb(169, 184, 195) 100%
+        );
+        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(
+          135deg,
+          rgb(74, 234, 220) 0%,
+          rgb(151, 120, 209) 20%,
+          rgb(207, 42, 186) 40%,
+          rgb(238, 44, 130) 60%,
+          rgb(251, 105, 98) 80%,
+          rgb(254, 248, 76) 100%
+        );
+        --wp--preset--gradient--blush-light-purple: linear-gradient(
+          135deg,
+          rgb(255, 206, 236) 0%,
+          rgb(152, 150, 240) 100%
+        );
+        --wp--preset--gradient--blush-bordeaux: linear-gradient(
+          135deg,
+          rgb(254, 205, 165) 0%,
+          rgb(254, 45, 45) 50%,
+          rgb(107, 0, 62) 100%
+        );
+        --wp--preset--gradient--luminous-dusk: linear-gradient(
+          135deg,
+          rgb(255, 203, 112) 0%,
+          rgb(199, 81, 192) 50%,
+          rgb(65, 88, 208) 100%
+        );
+        --wp--preset--gradient--pale-ocean: linear-gradient(
+          135deg,
+          rgb(255, 245, 203) 0%,
+          rgb(182, 227, 212) 50%,
+          rgb(51, 167, 181) 100%
+        );
+        --wp--preset--gradient--electric-grass: linear-gradient(
+          135deg,
+          rgb(202, 248, 128) 0%,
+          rgb(113, 206, 126) 100%
+        );
+        --wp--preset--gradient--midnight: linear-gradient(
+          135deg,
+          rgb(2, 3, 129) 0%,
+          rgb(40, 116, 252) 100%
+        );
+        --wp--preset--duotone--dark-grayscale: url("#wp-duotone-dark-grayscale");
+        --wp--preset--duotone--grayscale: url("#wp-duotone-grayscale");
+        --wp--preset--duotone--purple-yellow: url("#wp-duotone-purple-yellow");
+        --wp--preset--duotone--blue-red: url("#wp-duotone-blue-red");
+        --wp--preset--duotone--midnight: url("#wp-duotone-midnight");
+        --wp--preset--duotone--magenta-yellow: url("#wp-duotone-magenta-yellow");
+        --wp--preset--duotone--purple-green: url("#wp-duotone-purple-green");
+        --wp--preset--duotone--blue-orange: url("#wp-duotone-blue-orange");
+        --wp--preset--font-size--small: 13px;
+        --wp--preset--font-size--medium: 20px;
+        --wp--preset--font-size--large: 36px;
+        --wp--preset--font-size--x-large: 42px;
+        --wp--preset--spacing--20: 0.44rem;
+        --wp--preset--spacing--30: 0.67rem;
+        --wp--preset--spacing--40: 1rem;
+        --wp--preset--spacing--50: 1.5rem;
+        --wp--preset--spacing--60: 2.25rem;
+        --wp--preset--spacing--70: 3.38rem;
+        --wp--preset--spacing--80: 5.06rem;
+      }
+      :where(.is-layout-flex) {
+        gap: 0.5em;
+      }
+      body .is-layout-flow > .alignleft {
+        float: left;
+        margin-inline-start: 0;
+        margin-inline-end: 2em;
+      }
+      body .is-layout-flow > .alignright {
+        float: right;
+        margin-inline-start: 2em;
+        margin-inline-end: 0;
+      }
+      body .is-layout-flow > .aligncenter {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      body .is-layout-constrained > .alignleft {
+        float: left;
+        margin-inline-start: 0;
+        margin-inline-end: 2em;
+      }
+      body .is-layout-constrained > .alignright {
+        float: right;
+        margin-inline-start: 2em;
+        margin-inline-end: 0;
+      }
+      body .is-layout-constrained > .aligncenter {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      body
+        .is-layout-constrained
+        > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        max-width: var(--wp--style--global--content-size);
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      body .is-layout-constrained > .alignwide {
+        max-width: var(--wp--style--global--wide-size);
+      }
+      body .is-layout-flex {
+        display: flex;
+      }
+      body .is-layout-flex {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      body .is-layout-flex > * {
+        margin: 0;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      .has-black-color {
+        color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-color {
+        color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-color {
+        color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-color {
+        color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-color {
+        color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-color {
+        color: var(--wp--preset--color--luminous-vivid-orange) !important;
+      }
+      .has-luminous-vivid-amber-color {
+        color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-color {
+        color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-color {
+        color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-color {
+        color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-color {
+        color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-color {
+        color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-background-color {
+        background-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-background-color {
+        background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-background-color {
+        background-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-background-color {
+        background-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-background-color {
+        background-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-amber
+        ) !important;
+      }
+      .has-light-green-cyan-background-color {
+        background-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-background-color {
+        background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-background-color {
+        background-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-border-color {
+        border-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-border-color {
+        border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-border-color {
+        border-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-border-color {
+        border-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-border-color {
+        border-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-border-color {
+        border-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-border-color {
+        border-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-border-color {
+        border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-border-color {
+        border-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+        background: var(
+          --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple
+        ) !important;
+      }
+      .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+        background: var(
+          --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan
+        ) !important;
+      }
+      .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-orange-to-vivid-red
+        ) !important;
+      }
+      .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+        background: var(
+          --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray
+        ) !important;
+      }
+      .has-cool-to-warm-spectrum-gradient-background {
+        background: var(
+          --wp--preset--gradient--cool-to-warm-spectrum
+        ) !important;
+      }
+      .has-blush-light-purple-gradient-background {
+        background: var(--wp--preset--gradient--blush-light-purple) !important;
+      }
+      .has-blush-bordeaux-gradient-background {
+        background: var(--wp--preset--gradient--blush-bordeaux) !important;
+      }
+      .has-luminous-dusk-gradient-background {
+        background: var(--wp--preset--gradient--luminous-dusk) !important;
+      }
+      .has-pale-ocean-gradient-background {
+        background: var(--wp--preset--gradient--pale-ocean) !important;
+      }
+      .has-electric-grass-gradient-background {
+        background: var(--wp--preset--gradient--electric-grass) !important;
+      }
+      .has-midnight-gradient-background {
+        background: var(--wp--preset--gradient--midnight) !important;
+      }
+      .has-small-font-size {
+        font-size: var(--wp--preset--font-size--small) !important;
+      }
+      .has-medium-font-size {
+        font-size: var(--wp--preset--font-size--medium) !important;
+      }
+      .has-large-font-size {
+        font-size: var(--wp--preset--font-size--large) !important;
+      }
+      .has-x-large-font-size {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+      }
+      .wp-block-navigation a:where(:not(.wp-element-button)) {
+        color: inherit;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      .wp-block-pullquote {
+        font-size: 1.5em;
+        line-height: 1.6;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="dashicons-css"
+      href="https://kuma-academy.org/wp-includes/css/dashicons.min.css?ver=6.1.1"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="post-views-counter-frontend-css"
+      href="https://kuma-academy.org/wp-content/plugins/post-views-counter/css/frontend.min.css?ver=1.3.12"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="ppress-frontend-css"
+      href="https://kuma-academy.org/wp-content/plugins/wp-user-avatar/assets/css/frontend.min.css?ver=4.9.0"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="ppress-flatpickr-css"
+      href="https://kuma-academy.org/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.css?ver=4.9.0"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="ppress-select2-css"
+      href="https://kuma-academy.org/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.css?ver=6.1.1"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="ez-toc-css"
+      href="https://kuma-academy.org/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.46"
+      media="all"
+    />
+    <style id="ez-toc-inline-css" type="text/css">
+      div#ez-toc-container p.ez-toc-title {
+        font-size: 120%;
+      }
+      div#ez-toc-container p.ez-toc-title {
+        font-weight: 500;
+      }
+      div#ez-toc-container ul li {
+        font-size: 95%;
+      }
+      div#ez-toc-container nav ul ul li ul li {
+        font-size: 90% !important;
+      }
+      .ez-toc-container-direction {
+        direction: ltr;
+      }
+      .ez-toc-counter ul {
+        counter-reset: item;
+      }
+      .ez-toc-counter nav ul li a::before {
+        content: counters(item, ".", decimal) ". ";
+        display: inline-block;
+        counter-increment: item;
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-right: 0.2em;
+        float: left;
+      }
+      .ez-toc-widget-direction {
+        direction: ltr;
+      }
+      .ez-toc-widget-container ul {
+        counter-reset: item;
+      }
+      .ez-toc-widget-container nav ul li a::before {
+        content: counters(item, ".", decimal) ". ";
+        display: inline-block;
+        counter-increment: item;
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-right: 0.2em;
+        float: left;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      id="normalize-css"
+      href="https://kuma-academy.org/wp-content/themes/kuma/normalize.css?ver=1.0"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="html5blank-css"
+      href="https://kuma-academy.org/wp-content/themes/kuma/style.css?ver=1.0"
+      media="all"
+    />
+  </head>
+  <body>
+    <!--*******  課程集結頁開始  *******-->
+    <!-- 課程集結頁：CSS -->
+    <link rel="stylesheet" href="courses.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- 課程集結頁：HTML -->
+    <!-- html code for 集結頁 -->
+    <div class="courses_collection">
+      <!-- 主視覺區 -->
+      <div class="mainIntro" id="pageHeader">
+        <div class="mainIntroImgs">
+          <!-- 圖01 -->
+          <div class="mainImg expander">
+            <div class="mainImgText"></div>
+            <img src="kuma_12.png" alt="kuma_Img" width="800" height="800" />
+          </div>
+
+          <!-- 圖02  -->
+          <div class="mainImg expander">
+            <div class="mainImgText"></div>
+            <img src="kuma_13.png" alt="kuma_Img" width="800" height="800" />
+          </div>
+          <!-- 圖00 plus  -->
+          <div class="mainImg expander">
+            <div class="mainImgText"></div>
+            <img src="kuma_01.png" alt="kuma_Img" width="800" height="800" />
+          </div>
+
+          <!-- 圖03 -->
+          <div class="mainImg expander">
+            <div class="mainImgText"></div>
+            <img src="kuma_04.png" alt="kuma_Img" width="800" height="800" />
+          </div>
+
+          <!-- 圖04  -->
+          <div class="mainImg expander">
+            <div class="mainImgText"></div>
+            <img src="kuma_03.png" alt="kuma_Img" width="800" height="800" />
+          </div>
+        </div>
+      </div>
+      <!-- 課程集結區 -->
+      <div class="course_content">
+        <!--  -->
+
+        <!-- course 黑熊學院基礎營-12月 -->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2XCKDHOemwQUMLAUNUVTnxfUa7I"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_left">
+              <img
+                src="https://static-assets.oen.tw/images/img-2XCJ6dvb8pzWKIpoa85nwxL6DJl.jpg"
+                alt="courseImg"
+                width="1080"
+                height="608"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>黑熊學院基礎營-12月</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>1,000</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>全台七個城市</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- course 黑熊森遊會- 親子防災暨民防意識推廣園遊會 -->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2WNhTSTOOOizqvAqWtqvoUihkSJ"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_left">
+              <img
+                src="https://static-assets.oen.tw/images/img-2WNffo471pmzyHaabutFL3PcdaB.jpg"
+                alt="courseImg"
+                width="1080"
+                height="608"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>【免費活動】黑熊森遊會- 親子防災暨民防意識推廣園遊會</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>免費</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>新北</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- course 黑熊學院基礎營-11月 -->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2VyXCKgkgQja92zhqpKk0EoryPT"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_left">
+              <img
+                src="https://static-assets.oen.tw/images/img-2VyVp9KvvIEpkIzes5Xjg1SBfck.jpg"
+                alt="courseImg"
+                width="1080"
+                height="608"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>黑熊學院基礎營-11月</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>1,000</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>全台八個城市</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- course 熊友小聚 -->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2UyNtIbZmS7P1rjqUFX2RKMjIXf"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_left">
+              <img
+                src="https://static-assets.oen.tw/images/img-2VYwnsloELv3sfbFUN9hDB5CRFU.jpg"
+                alt="courseImg"
+                width="1080"
+                height="608"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>熊友小聚</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>免費</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>台北</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- course 機智避難生活：技能複習 x 情境演練 -->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2PudvaHsFJuFrotNijDU4usGsoq"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_right">
+              <img
+                src="https://static-assets.oen.tw/images/img-2UbOesTL851cDXMg4H0zdnf0UBZ.jpg"
+                alt="courseImg"
+                width="1080"
+                height="608"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>機智避難生活：技能複習 x 情境演練</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>400～580</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>台北、台中、高雄</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- course 行走江湖必學：一次就上手的徒手防身術 -->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2UjIXC2kLafx3VPBeHHFzPNgrd9"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_left">
+              <img
+                src="https://static-assets.oen.tw/images/img-2UjL2Bi16308Mm8DIx21JBi7vzz.jpg"
+                alt="courseImg"
+                width="1080"
+                height="608"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>行走江湖必學：一次就上手的徒手防身術</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>1,980</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>台北</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- course 兵棋推演 -->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="hhttps://kuma-academy.oen.tw/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_right">
+              <img
+                src="https://static-assets.oen.tw/images/img-2OPNLjs2lnCG7pLhyiczWXcoLA3.jpg"
+                alt="courseImg"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>兵棋推演</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>3,600</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>台北</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- course OSINT：公開情報搜集 學程班 -->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2RgLFij60C22uoNsx02JBAnyM9u"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_left">
+              <img
+                src="https://static-assets.oen.tw/images/img-2RmZHiBDFXmP2ElZgtTlBVkOFbU.jpg"
+                alt="courseImg"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>OSINT：公開情報搜集 學程班</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>3,600</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>台北</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+              <div class="course_details_extra fontAwesomeDiv">
+                <i class="fa-solid fa-triangle-exclamation fontAwesomePin"></i>
+                <p>需具備基礎營完訓資格</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- course 瞭解中國 -->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2Qs5mkMzxkXngisNH4uUHJv46qQ"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_right">
+              <img
+                src="https://static-assets.oen.tw/images/img-2PAixpVp4fuCos2oyaL2uHQZ0kl.jpg"
+                alt="courseImg"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>瞭解中國</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>600</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>台北</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- course 地表第一戰研所：戰略學 -->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2RKHGLJXe6SQkUYXPIjDB4J10aj"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_left">
+              <img
+                src="https://static-assets.oen.tw/images/img-2PMGQKXxP5JKcCbcaMQwWdiyQzt.jpg"
+                alt="courseImg"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>地表第一戰研所：戰略學</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>2,000</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>台北</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+              <div class="course_details_extra fontAwesomeDiv">
+                <i class="fa-solid fa-triangle-exclamation fontAwesomePin"></i>
+                <p>需具備基礎營完訓資格</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- course 第五縱隊識別 -->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2RDfIZJ4KJNlC6v8uLNWA5IqRaD"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_right">
+              <img
+                src="https://static-assets.oen.tw/images/img-2PAkCxPkJnmaHGwdb8IE4uJWmEK.jpg"
+                alt="courseImg"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>第五縱隊識別</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>900</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>台北</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+              <div class="course_details_extra fontAwesomeDiv">
+                <i class="fa-solid fa-triangle-exclamation fontAwesomePin"></i>
+                <p>需具備基礎營完訓資格</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- course 當災難來臨：尋找自癒力 -->
+        <div class="course_container course_closed">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2RDkaSsvITOysr8NH0cxDsXOLPU"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_right">
+              <img
+                src="https://static-assets.oen.tw/images/img-2PM6pAq2EwIEmCh7h8VdgkgdeGJ.jpg"
+                alt="courseImg"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>當災難來臨：尋找自癒力</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>600</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>台北</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+              <div class="course_details_extra fontAwesomeDiv">
+                <i class="fa-solid fa-triangle-exclamation fontAwesomePin"></i>
+                <p>活動已結束</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- course 避難專家教你 我要活下去-->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2Qs6gdY113RPEz3uCkcsz56vV3z"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_right">
+              <img
+                src="https://static-assets.oen.tw/images/img-2PM6oSTlnZUIR9qUqlCKhLNU5TB.jpg"
+                alt="courseImg"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>避難專家教你 我要活下去</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>600</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>台北</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+              <div class="course_details_extra fontAwesomeDiv">
+                <i class="fa-solid fa-triangle-exclamation fontAwesomePin"></i>
+                <p>需具備基礎營完訓資格</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- course 自主訓練：新手的三堂體能課-->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2RDgoWSBSagY2m5G43qjrxQLxH3"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_right">
+              <img
+                src="https://static-assets.oen.tw/images/img-2PAlQEmb7WjfNvyUe1A3MpxWYIN.jpg"
+                alt="courseImg"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>自主訓練：新手的三堂體能課</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>3,000</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>台北、高雄</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- course 食用植物種植-->
+        <div class="course_container">
+          <!-- 課程圖片 -->
+          <a
+            href="https://kuma-academy.oen.tw/events/2Qs7rkRABCyznEhOSRdz8eePKyL"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="course_img img_align_right">
+              <img
+                src="https://static-assets.oen.tw/images/img-2PAn1GIOJTyEGU92iC7YoNuTQmH.jpg"
+                alt="courseImg"
+              /></div
+          ></a>
+          <!-- 課程說明 -->
+          <div class="course_details">
+            <div class="course_title">
+              <h3>食用植物種植</h3>
+            </div>
+            <!-- 課程相關資訊 -->
+            <div class="course_details_info">
+              <div class="course_details_basic">
+                <div class="course_listPrice fontAwesomeDiv">
+                  <i class="fa-solid fa-dollar-sign fontAwesomePin"></i>
+                  <p>1,800</p>
+                </div>
+                <div class="course_address fontAwesomeDiv">
+                  <i class="fa-solid fa-location-dot fontAwesomePin"></i>
+                  <p>台北</p>
+                </div>
+                <div class="course_date fontAwesomeDiv">
+                  <i class="fa-regular fa-clock fontAwesomePin"></i>
+                  <p>開課中</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 課程集結頁：JS for 玩偶動態 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+      let expanders = gsap.utils.toArray(".expander");
+
+      let active; // keep track of which expander is open
+      expanders.forEach(function (expander, index) {
+        //create animation for each expander
+        let animation = gsap.timeline({ paused: true });
+
+        animation.to(expander, { width: 500, duration: 0.1 });
+
+        //apply the timeline animation to an animation property on the expander
+        expander.animation = animation;
+        expander.addEventListener("click", function () {
+          if (active) {
+            //close the active expander if there is one by reversing it
+
+            active.animation.reverse();
+          }
+          expander.animation.play(); // play the animation of the element you clicked on (this opens it)
+          active = expander; // keep track of which expander is open
+        });
+        //close this expander when you click the close button by reversing the animation
+        expander.addEventListener("mouseleave", function (event) {
+          event.stopPropagation();
+          expander.animation.reverse();
+        });
+      });
+    </script>
+    <!--*******  課程集結頁結束  *******-->
+  </body>
+</html>

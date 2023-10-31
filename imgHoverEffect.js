@@ -1,5 +1,3 @@
-console.log("good");
-
 const targets = document.querySelectorAll(".imgs_list");
 
 targets.forEach(function (target) {
@@ -34,44 +32,5 @@ targets.forEach(function (target) {
     function updateImageLink() {
       setTimeout((imgs[0].src = imagesLinks[j]), time);
     }
-
-    /* 
-    // 輪播時間設定
-   
-       function changeImg() {
-      imgs[0].src = imagesLinks[j];
-      if ((j < imgs.length, j++)) {
-        setTimeout((imgs[0].src = imagesLinks[j]), time);
-        console.log(imgs[0].src);
-      }
-    }
-    changeImg();
-     let time = 300000;
-    function changeImg() {
-      imgs[0].src = imagesLinks[j];
-      if (j < imgs.length - 1) {
-        j++;
-      } else {
-        j = 0;
-      }
-      setTimeout((imgs[0].src = imagesLinks[j]), time);
-    }
-    changeImg();
-
-    // 固定的時間，更改照片群組中的第一張照片連結位置
-    function changeImg() {
-      //依序更改照片連結位置，
-      imgs[0].src = imagesLinks[j];
-      if (j < imgs.length - 1) {
-        j++;
-      } else {
-        j = 0;
-      }
-      //   間隔內更新
-      setTimeout("changeImg()", time);
-    }
-
-    changeImg();
-    */
   });
 });

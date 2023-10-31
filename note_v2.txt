@@ -1,0 +1,9 @@
+商品集結頁：
+1. html, css都有修正。請覆蓋過去。
+2. 多了一個js的檔案，products_imgHover.js。做mouse over商品圖輪播的效果。
+
+課程集結頁：
+1. 結構如商品集結頁，所需的html碼，以"課程集結頁開始"、"課程集結頁結束"標記。
+2. css：一個是font awesome的CDN連結，做符號圖像的使用，另一個為products.css. 
+3. js：使用 GSAP。GSAP CDN連結與JS程式碼。
+4. 圖像圖檔五個。
